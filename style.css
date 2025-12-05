@@ -1,5 +1,10 @@
 /* STYLE SHEET FOR THE UNIT TABLE */
 
+h1 {
+    color: navy;
+    text-align: center
+}
+
 table, td, th {
     border: 1px solid black
 }
