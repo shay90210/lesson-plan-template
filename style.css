@@ -5,6 +5,10 @@ h1 {
     text-align: center;
 }
 
+td {
+    padding: 14px;
+}
+
 .month {
     background-color: rgb(240, 240, 125);
 }
