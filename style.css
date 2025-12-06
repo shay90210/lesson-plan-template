@@ -21,6 +21,30 @@ h1 {
     background-color: rgb(67, 235, 67);
 }
 
+.objective {
+    background-color: rgb(206, 139, 16);
+}
+
+.standard {
+    background-color: rgb(180, 81, 180);
+}
+
+.material {
+    background-color: rgb(12, 161, 180);
+}
+
+.term {
+    background-color: rgb(253, 246, 142);
+}
+
+.knowledge {
+    background-color: rgb(35, 216, 171);
+}
+
+.project {
+    background-color: rgb(231, 86, 50);
+}
+
 table, td, th {
     border: 1px solid black;
 }
