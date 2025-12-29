@@ -1,8 +1,10 @@
 require 'sinatra'
 
 get '/' do
-    erd: index
+    erb: index
 end
+
+require "sinatra"
 
 get "/" do
   @months = {
@@ -82,7 +84,7 @@ get "/" do
     "May" => {
       title: "Creating Digital Content",
       grade: "Grades 9-10",
-      subject: "Reading"
+      subject: "Reading & Writing",
       objective: "Students will develop digital literacy skills by producing original content for online or multimedia platforms, applying critical thinking, ethical standards, audience awareness, and effective communication strategies.",
       standards: [
         "CCSS.ELA-LITERACY.W.9-10.6 – Use technology to produce and publish writing.",
