@@ -82,4 +82,22 @@ get "/" do
     "May" => {
       title: "Creating Digital Content",
       grade: "Grades 9-10",
-      subject: "Reading
+      subject: "Reading"
+      objective: "Students will develop digital literacy skills by producing original content for online or multimedia platforms, applying critical thinking, ethical standards, audience awareness, and effective communication strategies.",
+      standards: [
+        "CCSS.ELA-LITERACY.W.9-10.6 – Use technology to produce and publish writing.",
+        "CCSS.ELA-LITERACY.SL.9-10.5 – Make strategic use of digital media in presentations.",
+        "CCSS.ELA-LITERACY.W.9-10.8 – Gather, evaluate, and integrate information from digital sources."
+      ],
+      materials: [
+        "Book: Understanding Comics by Scott McCloud (for visual literacy + digital storytelling concepts)",
+        "A Chromebook/laptop with access to Canva, Google Sites, or a classroom-safe video editor"
+      ],
+      vocabulary: ["Digital Footprint", "Media Literacy", "Copyright & Fair Use", "Audience Engagement", "Storyboard"],
+      prior_knowledge: "Comfort using basic digital tools or apps",
+      project: "Digital Message Design Audit"
+    }
+  }
+
+  erb :index
+end
