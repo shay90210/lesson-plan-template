@@ -1,7 +1,7 @@
 require 'sinatra'
 require 'erb'
 
-get "/" do
+def lesson_data
   @months = {
     "January" => {
       title: "Shakespeare: Language, Impulsivity, & Consequence",
