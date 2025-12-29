@@ -1,10 +1,6 @@
 require 'sinatra'
 require 'erb'
 
-get '/' do
-    erb :index
-end
-
 get "/" do
   @months = {
     "January" => {
@@ -99,6 +95,10 @@ get "/" do
       project: "Digital Message Design Audit"
     }
   }
+
+  get '/' do
+    erb :index
+  end
 
   erb :index
 end
