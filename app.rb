@@ -1,7 +1,7 @@
 require 'sinatra'
 require 'erb'
 
-def lesson_data
+get "/" do
   @months = {
     "January" => {
       title: "Shakespeare: Language, Impulsivity, & Consequence",
@@ -95,10 +95,6 @@ def lesson_data
       project: "Digital Message Design Audit"
     }
   }
-
-  get '/' do
-    erb :index
-  end
 
   erb :index
 end
