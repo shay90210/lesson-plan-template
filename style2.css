@@ -1,0 +1,120 @@
+/* ---------- Base Styles ---------- */
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: #f9f9f9;
+    margin: 0;
+    padding: 2rem;
+    color: #222;
+}
+
+h1 {
+    color: navy;
+    text-align: center;
+    margin-bottom: 0.25rem;
+}
+
+.subtitle {
+    text-align: center;
+    font-size: 0.95rem;
+    color: #555;
+    margin-bottom: 2rem;
+}
+
+/* ---------- Table Layout ---------- */
+
+table.unit-overview {
+    width: 100%;
+    border-collapse: collapse;
+    background-color: #ffffff;
+}
+
+caption {
+    caption-side: bottom;
+    padding: 0.75rem;
+    font-size: 0.85rem;
+    color: #555;
+}
+
+/* Shared cell styling */
+th,
+td {
+    border: 1px solid #333;
+    padding: 14px;
+    vertical-align: top;
+}
+
+/* Left column labels */
+tbody th[scope="row"] {
+    width: 15%;
+    font-weight: bold;
+    text-align: left;
+    background-color: #ececec;
+}
+
+/* ---------- Header Row ---------- */
+
+.month th {
+    background-color: #f0f07d;
+    text-align: center;
+    font-weight: bold;
+}
+
+/* ---------- Section Rows ---------- */
+
+.unit-title td {
+    background-color: #d6ecfa;
+    font-weight: bold;
+}
+
+.grade-level td {
+    background-color: #f6d1d1;
+    text-align: center;
+}
+
+.subject td {
+    background-color: #d9f5d9;
+    text-align: center;
+    font-weight: bold;
+}
+
+.objective td {
+    background-color: #f6e2c3;
+}
+
+.standards td {
+    background-color: #ead9f2;
+}
+
+.materials td {
+    background-color: #d9f1f5;
+}
+
+.final-project td {
+    background-color: #f8d0c4;
+    text-align: center;
+    font-weight: bold;
+}
+
+/* ---------- Lists ---------- */
+
+td ul {
+    margin: 0;
+    padding-left: 1.25rem;
+}
+
+td li {
+    margin-bottom: 0.35rem;
+}
+
+/* ---------- Small Screens ---------- */
+
+@media (max-width: 900px) {
+    body {
+        padding: 1rem;
+    }
+
+    table.unit-overview {
+        font-size: 0.9rem;
+    }
+}
