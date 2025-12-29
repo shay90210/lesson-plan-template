@@ -1,161 +1,115 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>ELA Unit Overview Template</title>
-
-    <link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8">
+  <title>ELA Unit Overview 2026</title>
+  <link rel="stylesheet" href="/style.css">
 </head>
 
 <body>
-    <main>
-        <h1>ELA & Reading Unit Overview 2026</h1>
-        <p class="subtitle">Sample Unit Plan (Grades 9–10)</p>
+  <h1>ELA & Reading Unit Overview 2026</h1>
 
-        <table class="unit-overview">
-            <caption>
-                Monthly ELA & Reading Units with Objectives, Standards, and Projects
-            </caption>
+  <table class="unit-overview">
+    <thead>
+      <tr class="month">
+        <th></th>
+        <% @months.keys.each do |month| %>
+          <th scope="col"><%= month %></th>
+        <% end %>
+      </tr>
+    </thead>
 
-            <thead>
-                <tr class="month">
-                    <th scope="col"></th>
-                    <th scope="col">January</th>
-                    <th scope="col">February</th>
-                    <th scope="col">March</th>
-                    <th scope="col">April</th>
-                    <th scope="col">May</th>
-                </tr>
-            </thead>
+    <tbody>
+      <% # Unit Title %>
+      <tr class="unit-title">
+        <th scope="row">Unit Title</th>
+        <% @months.each do |_, data| %>
+          <td><%= data[:title] %></td>
+        <% end %>
+      </tr>
 
-            <tbody>
-                <tr class="unit-title">
-                    <th scope="row">Unit Title</th>
-                    <td>Shakespeare: Language, Impulsivity, & Consequence</td>
-                    <td>Voices of Leadership: Inspiring Speeches & Persuasive Writing</td>
-                    <td>Lights, Camera, Literacy</td>
-                    <td>The Art of Expression: Poetry, Music, & Spoken Word</td>
-                    <td>Creating Digital Content</td>
-                </tr>
+      <% # Grade Level %>
+      <tr class="grade-level">
+        <th scope="row">Grade Level</th>
+        <% @months.each do |_, data| %>
+          <td><%= data[:grade] %></td>
+        <% end %>
+      </tr>
 
-                <tr class="grade-level">
-                    <th scope="row">Grade Level</th>
-                    <td>Grades 9–10</td>
-                    <td>Grades 9–10</td>
-                    <td>Grades 9–10</td>
-                    <td>Grades 9–10</td>
-                    <td>Grades 9–10</td>
-                </tr>
+      <% # Subject %>
+      <tr class="subject">
+        <th scope="row">Subject</th>
+        <% @months.each do |_, data| %>
+          <td><%= data[:subject] %></td>
+        <% end %>
+      </tr>
 
-                <tr class="subject">
-                    <th scope="row">Subject</th>
-                    <td colspan="5">Reading & Writing</td>
-                </tr>
+      <% # Learning Objective %>
+      <tr class="objective">
+        <th scope="row">Learning Objective</th>
+        <% @months.each do |_, data| %>
+          <td><%= data[:objective] %></td>
+        <% end %>
+      </tr>
 
-                <tr class="objective">
-                    <th scope="row">Learning Objective</th>
-                    <td>
-                        Students will analyze Shakespeare’s language and character choices to understand how impulsivity drives action and consequence, evaluating how timeless themes are conveyed through literary devices, dialogue, and plot.
-                    </td>
-                    <td>
-                        Students will examine persuasive techniques used by influential leaders and create original speeches or texts demonstrating effective rhetorical strategies.
-                    </td>
-                    <td>
-                        Students will analyze films as visual texts, identifying how cinematic techniques convey meaning, develop character, and communicate themes.
-                    </td>
-                    <td>
-                        Students will explore how poets, musicians, and spoken word artists use language and imagery to express ideas and identity, creating original works that reflect personal voice.
-                    </td>
-                    <td>
-                        Students will develop digital literacy skills by producing original multimedia content while applying ethical standards and audience awareness.
-                    </td>
-                </tr>
+      <% # State Standards %>
+      <tr class="standards">
+        <th scope="row">State Standards</th>
+        <% @months.each do |_, data| %>
+          <td>
+            <ul>
+              <% data[:standards].each do |standard| %>
+                <li><%= standard %></li>
+              <% end %>
+            </ul>
+          </td>
+        <% end %>
+      </tr>
 
-                <tr class="standards">
-                    <th scope="row">State Standards</th>
-                    <td>
-                        <ul>
-                            <li>RL.9-10.1 – Cite strong textual evidence</li>
-                            <li>RL.9-10.4 – Analyze figurative language</li>
-                            <li>RL.9-10.3 – Analyze complex characters</li>
-                        </ul>
-                    </td>
-                    <td>
-                        <ul>
-                            <li>RI.9-10.6 – Analyze rhetoric and purpose</li>
-                            <li>W.9-10.1 – Write arguments</li>
-                            <li>SL.9-10.4 – Present persuasively</li>
-                        </ul>
-                    </td>
-                    <td>
-                        <ul>
-                            <li>RL.9-10.7 – Analyze across mediums</li>
-                            <li>SL.9-10.2 – Integrate media information</li>
-                            <li>RI.9-10.7 – Compare accounts</li>
-                        </ul>
-                    </td>
-                    <td>
-                        <ul>
-                            <li>RL.9-10.5 – Analyze structure</li>
-                            <li>RL.9-10.4 – Analyze tone and imagery</li>
-                            <li>W.9-10.3 – Write narratives</li>
-                        </ul>
-                    </td>
-                    <td>
-                        <ul>
-                            <li>W.9-10.6 – Use technology to publish</li>
-                            <li>SL.9-10.5 – Use digital media</li>
-                            <li>W.9-10.8 – Evaluate digital sources</li>
-                        </ul>
-                    </td>
-                </tr>
+      <% # Materials %>
+      <tr class="materials">
+        <th scope="row">Materials</th>
+        <% @months.each do |_, data| %>
+          <td>
+            <ul>
+              <% data[:materials].each do |material| %>
+                <li><%= material %></li>
+              <% end %>
+            </ul>
+          </td>
+        <% end %>
+      </tr>
 
-                <tr class="materials">
-                    <th scope="row">Materials</th>
-                    <td>
-                        <ul>
-                            <li><em>Romeo and Juliet</em> by William Shakespeare</li>
-                            <li>Shakespearean language glossary</li>
-                        </ul>
-                    </td>
-                    <td>
-                        <ul>
-                            <li>MLK Jr.’s “I Have a Dream”</li>
-                            <li>“The Danger of a Single Story” (TED Talk)</li>
-                            <li>Ethos/Pathos/Logos organizer</li>
-                        </ul>
-                    </td>
-                    <td>
-                        <ul>
-                            <li><em>Hidden Figures</em> (2016)</li>
-                            <li>Film analysis guide</li>
-                        </ul>
-                    </td>
-                    <td>
-                        <ul>
-                            <li><em>The Poet X</em> by Elizabeth Acevedo</li>
-                            <li>Poetry notebook or digital journal</li>
-                        </ul>
-                    </td>
-                    <td>
-                        <ul>
-                            <li><em>Understanding Comics</em> by Scott McCloud</li>
-                            <li>Chromebook or laptop with creative tools</li>
-                        </ul>
-                    </td>
-                </tr>
+      <% # Vocabulary / Key Terms %>
+      <tr class="vocabulary">
+        <th scope="row">Vocabulary / Key Terms</th>
+        <% @months.each do |_, data| %>
+          <td>
+            <ul>
+              <% data[:vocabulary].each do |word| %>
+                <li><%= word %></li>
+              <% end %>
+            </ul>
+          </td>
+        <% end %>
+      </tr>
 
-                <tr class="final-project">
-                    <th scope="row">Final Project</th>
-                    <td>Character Choices Case Study</td>
-                    <td>Rhetorical Strategy Remix</td>
-                    <td>Scene Deconstruction Visual Essay</td>
-                    <td>Multimedia Poetry Analysis</td>
-                    <td>Digital Message Design Audit</td>
-                </tr>
-            </tbody>
-        </table>
-    </main>
+      <% # Prior Knowledge %>
+      <tr class="prior-knowledge">
+        <th scope="row">Prior Knowledge</th>
+        <% @months.each do |_, data| %>
+          <td><%= data[:prior_knowledge] %></td>
+        <% end %>
+      </tr>
+
+      <% # Final Project %>
+      <tr class="final-project">
+        <th scope="row">Final Project</th>
+        <% @months.each do |_, data| %>
+          <td><%= data[:project] %></td>
+        <% end %>
+      </tr>
+    </tbody>
+  </table>
 </body>
 </html>
