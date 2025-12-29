@@ -91,13 +91,13 @@ tbody th[scope="row"] {
 }
 
 .vocabulary td {
-    background-color: #bcfff6;
+    background-color: #d8fffa;
     text-align: center;
     font-weight: bold;
 }
 
 .prior-knowledge td {
-    background-color: #ffcbcb;
+    background-color: #ffe0e0;
     text-align: center;
     font-weight: bold;
 }
