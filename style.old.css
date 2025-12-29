@@ -1,48 +1,81 @@
-/* STYLE SHEET FOR THE UNIT TABLE */
+/* General page styles */
+body {
+    font-family: Arial, sans-serif;
+    margin: 20px;
+    background-color: #f5f5f5;
+}
 
 h1 {
     color: navy;
     text-align: center;
+    margin-bottom: 30px;
 }
 
+/* Table styles */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 0 auto;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    background-color: #fff;
+}
+
+th,
 td {
-    padding: 14px;
+    border: 1px solid #000;
+    padding: 12px 15px;
+    text-align: left;
+    vertical-align: top;
 }
 
+/* Hover effect for better readability */
+tbody tr:hover {
+    background-color: #f0f8ff;
+}
+
+/* Column header (months) */
 .month {
     background-color: rgb(240, 240, 125);
+    font-weight: bold;
+    text-align: center;
 }
 
-.title {
+/* Row-specific styles */
+.unit-title {
     background-color: rgb(68, 193, 252);
-    text-align: center;
     font-weight: bold;
+    text-align: center;
 }
 
 .grade {
     background-color: rgb(218, 79, 79);
-        text-align: center;
+    color: #fff;
+    text-align: center;
 }
 
-.subject{
+.subject {
     background-color: rgb(67, 235, 67);
     text-align: center;
 }
 
 .objective {
     background-color: rgb(206, 139, 16);
+    color: #fff;
 }
 
 .standard {
     background-color: rgb(180, 81, 180);
+    color: #fff;
 }
 
 .material {
     background-color: rgb(12, 161, 180);
+    color: #fff;
 }
 
 .term {
     background-color: rgb(253, 246, 142);
+    text-align: center;
 }
 
 .knowledge {
@@ -52,9 +85,30 @@ td {
 
 .project {
     background-color: rgb(231, 86, 50);
+    color: #fff;
     text-align: center;
 }
 
-table, td, th {
-    border: 1px solid black;
+/* Responsive table */
+@media screen and (max-width: 768px) {
+
+    table,
+    thead,
+    tbody,
+    th,
+    td,
+    tr {
+        display: block;
+    }
+
+    th,
+    td {
+        padding: 10px;
+        width: 100%;
+        box-sizing: border-box;
+    }
+
+    .month {
+        text-align: left;
+    }
 }
