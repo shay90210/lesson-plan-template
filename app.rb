@@ -1,10 +1,9 @@
 require 'sinatra'
+require 'erb'
 
 get '/' do
     erb :index
 end
-
-require "sinatra"
 
 get "/" do
   @months = {
