@@ -90,6 +90,18 @@ tbody th[scope="row"] {
     background-color: #d9f1f5;
 }
 
+.vocabulary td {
+    background-color: #c4b7ff;
+    text-align: center;
+    font-weight: bold;
+}
+
+.prior-knowledge td {
+    background-color: #ffc5f0;
+    text-align: center;
+    font-weight: bold;
+}
+
 .final-project td {
     background-color: #f8d0c4;
     text-align: center;
