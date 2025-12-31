@@ -98,3 +98,29 @@ get "/" do
 
   erb :index
 end
+
+# Temporary storage (resets when server restarts)
+LESSON_NOTES = {}
+
+get '/' do
+  @months = lesson_data
+  @notes = LESSON_NOTES
+  erb :index
+end
+
+post '/notes' do
+  month = params[:month]
+  note  = params[:note]
+
+  LESSON_NOTES[month] = note
+
+  redirect '/'
+end
+
+def lesson_data
+  {
+    "September" => { title: "Introduction to Writing" },
+    "October"   => { title: "Narrative Writing" },
+    "November"  => { title: "Informational Texts" }
+  }
+end
